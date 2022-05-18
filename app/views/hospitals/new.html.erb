@@ -1,0 +1,25 @@
+<h1>Create new Hospital!</h1>
+
+<%= form_with(model: @hospital_item) do |form| %>
+  
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :hospital_phone, style: "display: block" %>
+    <%= form.text_area :hospital_phone %>
+  </div>
+
+  <div>
+    <%= form.label :hospital_email, style: "display: block" %>
+    <%= form.text_area :hospital_email %>
+  </div>
+
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+

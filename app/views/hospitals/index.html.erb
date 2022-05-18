@@ -1,13 +1,13 @@
 <h1 style="text-align:center">Hospitals</h1>
 <% @hospital_items.each do |hospital_item| %>
 <br>
-  <%= image_tag hospital_item.hospital_photo %>
+  <%= image_tag hospital_item.hospital_photo unless hospital_item.hospital_photo.nil? %>
   <p>Title: <%= hospital_item.title %></p>
   <p>Street: <%= hospital_item.street %></p>
   <p> Number of House: <%= hospital_item.number_of_home %></p>
   <p>Post Number: <%= hospital_item.post_number %></p>
   <p>Phone Number: <%= hospital_item.hospital_phone %></p>
-  <p>Description: <%= hospital_item.description[0,250] + "..." %></p>
+  <p>Description: <%= hospital_item.description[0,250] + "..." unless hospital_item.description.nil?%></p>
   <br>
   <hr size="1" width="100%" color="grey">
 <% end %>
