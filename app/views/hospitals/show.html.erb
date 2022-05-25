@@ -1,4 +1,4 @@
-<%= image_tag @hospital_item.hospital_photo %>
+<%= image_tag @hospital_item.hospital_photo unless @hospital_item.hospital_photo.nil?%>
 
 <h1><%= @hospital_item.title %></h1>
 

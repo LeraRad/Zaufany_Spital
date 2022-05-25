@@ -42,4 +42,14 @@ class HospitalsController < ApplicationController
     @hospital_item = Hospital.find(params[:id])
   end
 
+  def destroy
+    @hospital_item = Hospital.find(params[:id])
+
+    @hospital_item.destroy
+
+    respond_to do |format|
+      format.html { redirect_to hospitals_url, notice: 'Record was removed' }
+      format.json { head :no_content }
+    end
+  end
 end

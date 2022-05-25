@@ -65,3 +65,4 @@ group :development do
 end
 
 gem 'bcrypt'
+gem 'jquery'
